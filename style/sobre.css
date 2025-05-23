@@ -84,7 +84,7 @@
         margin: 20px auto 0;
     }
 
-    .sobre-imagem img {
+    .sobre-imagem {
         display: none;
     }
 }
@@ -109,7 +109,9 @@
         margin: 20px auto 0;
     }
 
-    .sobre-imagem img {
+    .sobre-imagem {
         display: none;
     }
+
+
 }
