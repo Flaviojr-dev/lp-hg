@@ -25,64 +25,84 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 32px;
     margin-top: 40px;
 }
 
-/* Estilo de cada card */
+/* Card estilizado */
 .card {
-    background-color: #5A189A;
+    background: linear-gradient(135deg, #5A189A, #7B2CBF);
     color: white;
-    width: 300px;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: 0 12px 28px rgba(90, 24, 154, 0.3);
     display: flex;
     flex-direction: column;
     text-align: left;
-
-    /* Começa com a borda invisível */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background-size: 200% 200%;
+}
+
+/* Efeito de brilho ao hover */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent);
+    z-index: 0;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(90, 24, 154, 0.4);
 }
 
 /* Ícone */
 .icon {
-    font-size: 28px;
+    font-size: 30px;
     background-color: white;
     color: #5A189A;
-    border-radius: 6px;
-    width: 32px;
-    height: 32px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    z-index: 1;
 }
 
 /* Título */
 .card h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    z-index: 1;
 }
 
 /* Texto */
 .card p {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.6;
     flex-grow: 1;
+    z-index: 1;
 }
 
-/* Link "Saber mais" no rodapé */
+/* Link */
 .card a {
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     font-size: 14px;
     margin-top: auto;
     display: inline-block;
     transition: opacity 0.2s;
+    z-index: 1;
 }
 
 .card a:hover {
@@ -109,45 +129,47 @@
         gap: 20px;
     }
 
+
+
     .card {
-        width: 45%;
-        /* dois cards por linha */
+        width: 46%;
     }
 }
-
-/* ===========================
+    /* ===========================
      CELULARES – até 576px
   =========================== */
-@media (max-width: 576px) {
-    .treinamento {
-        padding: 40px 10px;
-    }
+    @media (max-width: 576px) {
+        .treinamento {
+            padding: 40px 10px;
+        }
 
-    .treinamento h2 {
-        font-size: 22px;
-    }
+        .treinamento h2 {
+            font-size: 22px;
+        }
 
-    .card {
-        width: 100%;
-        /* um card por linha */
-        padding: 20px;
-    }
+        .card {
+            width: 100%;
+            padding: 24px 20px;
+        }
 
-    .card h3 {
-        font-size: 16px;
-    }
+        .icon {
+            font-size: 26px;
+            width: 34px;
+            height: 34px;
+        }
 
-    .card p {
-        font-size: 13px;
-    }
+        .card h3 {
+            font-size: 18px;
+        }
 
-    .card a {
-        font-size: 13px;
-    }
+        .card p,
+        .card a {
+            font-size: 13.5px;
+        }
 
-    .icon {
-        font-size: 24px;
-        width: 28px;
-        height: 28px;
+        .icon {
+            font-size: 24px;
+            width: 28px;
+            height: 28px;
+        }
     }
-}

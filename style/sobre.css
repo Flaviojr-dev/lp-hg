@@ -51,19 +51,61 @@
 
 .botao {
     display: inline-block;
-    padding: 14px 28px;
-    background-color: #5A189A;
+    padding: 15px 32px;
+    background: linear-gradient(135deg, #5A189A, #7B2CBF);
     color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 18px rgba(90, 24, 154, 0.4);
+    isolation: isolate;
+    margin-top: 30px;
+}
+
+.botao::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 60%);
+    animation: pulse-glow 4s infinite linear;
+    z-index: 0;
+}
+
+.botao::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.15), transparent, rgba(255, 255, 255, 0.15));
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .botao:hover {
-    background-color: #5A189A;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(90, 24, 154, 0.6);
 }
+
+.botao:hover::after {
+    transform: translateX(100%);
+}
+
+.botao span {
+    position: relative;
+    z-index: 2;
+}
+
 
 @media (max-width: 992px) {
     .sobre-container {
@@ -81,8 +123,15 @@
     }
 
     .botao {
-        margin: 20px auto 0;
+        display: block;
+        margin: 30px auto 0;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 0.95rem;
     }
+
 
     .sobre-imagem {
         display: none;
@@ -106,8 +155,15 @@
     }
 
     .botao {
-        margin: 20px auto 0;
+        display: block;
+        margin: 30px auto 0;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 0.95rem;
     }
+
 
     .sobre-imagem {
         display: none;
