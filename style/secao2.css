@@ -5,12 +5,12 @@
 }
 .comparison-title {
     font-size: 1.7rem;
-    font-weight: 400;
+    font-weight: 100;
     color: #5e299a;
     margin-bottom: 40px;
     line-height: 1.4;
-    margin-bottom: 50px;
-
+    width: 500px;
+    margin: 0 auto;
 }
 
 .comparison-title strong {
@@ -23,6 +23,7 @@
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .comparison-card {

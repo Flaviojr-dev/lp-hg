@@ -1,0 +1,115 @@
+.sobre-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 200px;
+    align-items: flex-start;
+    justify-content: center;
+    /* Este é o ponto chave para centralizar */
+}
+
+.sobre-texto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    color: #333;
+}
+
+.sobre-texto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.sobre-texto h2 span {
+    color: #5A189A;
+}
+
+.sobre-texto h2 strong {
+    color: #5A189A;
+    font-weight: bold;
+}
+
+.sobre-texto p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    width: 500px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #5A189A;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.botao:hover {
+    background-color: #5A189A;
+}
+
+@media (max-width: 992px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-texto,
+    .sobre-imagem {
+        max-width: 100%;
+    }
+
+    .sobre-texto p {
+        width: 100%;
+    }
+
+    .botao {
+        margin: 20px auto 0;
+    }
+
+    .sobre-imagem img {
+        display: none;
+    }
+}
+
+/* Responsivo: celulares (até 576px) */
+@media (max-width: 576px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-texto,
+    .sobre-imagem {
+        max-width: 100%;
+    }
+
+    .sobre-texto p {
+        width: 100%;
+    }
+
+    .botao {
+        margin: 20px auto 0;
+    }
+
+    .sobre-imagem img {
+        display: none;
+    }
+}

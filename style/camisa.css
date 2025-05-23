@@ -1,0 +1,146 @@
+.camisa-section {
+    background-image: url('../assets/images/fundo.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.camisa-imagem img {
+    max-width: 600px;
+    height: auto;
+}
+
+.camisa-conteudo {
+    flex: 1;
+    min-width: 300px;
+}
+
+.camisa-conteudo h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.camisa-conteudo h2 strong {
+    color: #ffffff;
+}
+
+.camisa-conteudo a {
+    color: #6b21a8;
+    text-decoration: none;
+}
+
+.camisa-conteudo .roxo {
+    color: #6b21a8;
+    font-weight: bold;
+}
+
+.camisa-conteudo .verde {
+    color: #44ffb2;
+    font-weight: bold;
+}
+
+.camisa-conteudo .botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #6e2dfd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.camisa-conteudo .botao:hover {
+    background-color: #6b21a8;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: 400;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.titulo-principal strong {
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .camisa-section {
+        padding: 60px 20px;
+        /* um pouco menos de espaço nas laterais */
+    }
+
+    .container {
+        flex-direction: column;
+        /* empilha imagem + texto */
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+        /* centraliza textos */
+    }
+
+    .camisa-imagem img {
+        max-width: 80%;
+        /* imagem menor, mas ainda em destaque   */
+    }
+
+    .camisa-conteudo {
+        max-width: 600px;
+        /* evita linhas muito longas            */
+    }
+
+    .titulo-principal {
+        font-size: 2em;
+        /* título levemente menor               */
+        margin-bottom: 36px;
+    }
+}
+
+/* =======================
+     CELULARES – até 576 px
+     ======================= */
+@media (max-width: 576px) {
+    .camisa-section {
+        padding: 50px 15px;
+    }
+
+    .camisa-imagem img {
+        max-width: 100%;
+        /* ocupa toda a largura disponível       */
+    }
+
+    .camisa-conteudo h2 {
+        font-size: 1.6em;
+        margin-bottom: 16px;
+    }
+
+    .camisa-conteudo p {
+        font-size: 0.95em;
+        /* ligeiro ajuste de legibilidade        */
+    }
+
+    .camisa-conteudo .botao {
+        width: 100%;
+        padding: 14px 0;
+        margin-top: 24px;
+    }
+
+    .titulo-principal {
+        font-size: 1.8em;
+        margin-bottom: 28px;
+    }
+}

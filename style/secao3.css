@@ -90,6 +90,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-top: -70px;
     }
 
     .text {
@@ -114,6 +115,7 @@
     .text p,
     .benefits li {
         font-size: 15px;
+        text-align: left;
     }
 
     .cta-button {
