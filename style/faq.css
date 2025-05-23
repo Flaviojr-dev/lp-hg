@@ -15,7 +15,7 @@
 }
 
 .faq-title strong {
-    color: #b277ff;
+    color: #5A189A;
 }
 
 /* FAQ container */
@@ -27,7 +27,7 @@
 
 /* Each question block */
 .faq-item {
-    border-bottom: 1px solid #b277ff;
+    border-bottom: 1px solid #5A189A;
     padding: 20px 0;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -42,7 +42,7 @@
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    color: #b277ff;
+    color: #5A189A;
     font-size: 1.1rem;
 }
 

@@ -19,7 +19,7 @@
     border-radius: 12px;
 }
 
-.text h2 > span {
+.text h2>span {
     color: #5A189A;
     font-weight: 900;
 }
@@ -40,11 +40,7 @@
     margin-bottom: 20px;
 }
 
-.text .highlight {
-    color: #5A189A;
-    font-weight: bold;
-}
-
+.text .highlight,
 .text .purple {
     color: #5A189A;
     font-weight: bold;
@@ -78,35 +74,37 @@
     font-weight: bold;
     transition: background-color 0.3s;
     text-transform: uppercase;
+    display: inline-block;
 }
-
 
 .cta-button:hover {
-    background-color: #5b21b6;
+    background-color: #5A189A;
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
     .content {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
         margin-top: -70px;
+        text-align: left;
+        padding: 0 20px;
     }
 
     .text {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .benefits li {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .image img {
         display: none;
-
     }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
     .text h2 {
         font-size: 24px;
@@ -130,5 +128,11 @@
 
     .image img {
         display: none;
+    }
+
+    .content {
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 16px;
     }
 }

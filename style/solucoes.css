@@ -8,7 +8,7 @@
 
 .treinamento h2 {
     font-size: 28px;
-    color: #4b0082;
+    color: #5A189A;
     font-weight: 400;
     width: 500px;
     margin: 0 auto;
@@ -17,7 +17,7 @@
 
 .treinamento h2 strong {
     font-weight: 700;
-    color: #6b21a8;
+    color: #5A189A;
 }
 
 /* Container dos cards */
@@ -31,7 +31,7 @@
 
 /* Estilo de cada card */
 .card {
-    background-color: #6b21a8;
+    background-color: #5A189A;
     color: white;
     width: 300px;
     border-radius: 12px;
@@ -50,7 +50,7 @@
 .icon {
     font-size: 28px;
     background-color: white;
-    color: #6b21a8;
+    color: #5A189A;
     border-radius: 6px;
     width: 32px;
     height: 32px;
