@@ -36,3 +36,11 @@ const setupComparison = (containerId) => {
 };
 
 ["comp1", "comp2", "comp3"].forEach(setupComparison);
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
