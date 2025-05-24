@@ -1,10 +1,16 @@
 .hero {
-    max-height: 700px;
-    background-image: url('../assets/images/fundo.png');
+    min-height: 100vh;
+    /* ou ajuste para 120vh se quiser mais espaço */
+    display: flex;
+    align-items: center;
+    background-image: url('/assets/images/Group\ 16\ \(5\).png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     padding: 40px 0;
     position: relative;
+    color: #fff;
+    margin: 0 auto;
 }
 
 .logo img {
@@ -12,13 +18,21 @@
 }
 
 .hero-content {
-    max-width: 50%;
+    margin-right: auto;
+    margin-left: 0;
+    max-width: 600px;
+    text-align: left;
+    color: white;
 }
 
 .container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    /* ou 'center' se preferir simetria */
+    width: 100%;
+    padding: 0 3vw;
+    /* margem lateral */
 }
 
 .hero-content .logo {
@@ -47,16 +61,17 @@
 
 .hero-buttons {
     display: flex;
-    gap: 15px; /* Espaço entre os botões */
+    gap: 15px;
+    /* Espaço entre os botões */
     flex-wrap: wrap;
 }
 
 .hero-buttons a {
     position: relative;
-    padding: 14px 28px;
+    padding: 18px 60px;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 6px;
     text-decoration: none;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -162,100 +177,176 @@
 
 /* Responsivo para tablets */
 @media (max-width: 992px) {
+    .hero {
+        background: none;
+        /* Remove o background da seção principal */
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .hero::before {
+        content: "";
+        display: block;
+        width: 180%;
+        height: 570px;
+        /* altura do banner, ajuste como preferir */
+        background-image: url('/assets/images/Group\ 16\ \(5\).png');
+        background-size: cover;
+        background-position: center;
+    }
+
     .container {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        padding: 40px 20px;
-    }
-
-    .hero {
-        padding-bottom: 0;
-        max-height: none;
-        /* Remove limite fixo */
-    }
-
-    .scroll-wrapper {
-        margin-top: 0;
-        /* Elimina espaço extra */
+        padding: 20px;
     }
 
     .hero-content {
+        margin: 0 auto;
         max-width: 100%;
-        margin-bottom: 30px;
+        padding: 20px;
     }
 
-    .hero-image {
-        display: none;
+    .hero-content h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        color: black;
+        font-weight: bold;
     }
 
-    .hero-buttons {
-        justify-content: cenlter;
-        flex-wrap: wrap;
-    }
-}
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: black;
+        text-align: center;
+        font-weight: 400;
 
-
-@media (max-width: 1194px) {
-    .hero {
-        padding-bottom: 0;
-        max-height: none;
-    }
-
-    .scroll-wrapper {
-        margin-top: 0;
-    }
-
-    .hero-image {
-        display: none;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 30px;
     }
 
     .hero-buttons {
         justify-content: center;
         flex-wrap: wrap;
     }
-}
-
-/* Responsivo para celulares */
-@media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero {
-        padding-bottom: 0;
-        max-height: none;
-    }
-
-    .scroll-wrapper {
-        margin-top: 0;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
 
     .hero-buttons a {
-        padding: 10px 16px;
+        padding: 18px 60px;
         font-size: 0.9rem;
+        text-align: center;
     }
 
     .hero-image {
         display: none;
     }
 
+    .scroll-wrapper {
+        height: 8px;
+        margin-top: 10px;
+    }
+
     .scroll-icon {
         width: 30px;
         height: 30px;
-        /* Ajustado para 30px */
+    }
+
+    .hero-buttons .btn-secondary {
+        background: transparent;
+        border: 2px solid #5A189A;
+        color: #5A189A;
+        position: relative;
+    }
+}
+
+
+
+/* Responsivo para celulares */
+@media (max-width: 996px) {
+    .hero {
+        background: none;
+        /* Remove o background da seção principal */
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .hero::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 570px;
+        /* altura do banner, ajuste como preferir */
+        background-image: url('/assets/images/Group\ 20.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: black;
+        text-align: center;
+        font-weight: 400;
+
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-buttons a {
+        padding: 18px 60px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .hero-image {
+        display: none;
     }
 
     .scroll-wrapper {
         height: 8px;
         margin-top: 10px;
+    }
+
+    .scroll-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero-buttons .btn-secondary {
+        background: transparent;
+        border: 2px solid #5A189A;
+        color: #5A189A;
+        position: relative;
     }
 }
