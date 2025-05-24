@@ -274,7 +274,7 @@
     }
 
     .logo img {
-        display: none;
+        align-items: center;
     }
 
     .hero::before {
@@ -283,7 +283,7 @@
         width: 100%;
         height: 570px;
         /* altura do banner, ajuste como preferir */
-        background-image: url('/assets/images/534534.jpg');
+        background-image: url('/assets/images/hugo-cell.jpg');
         background-size: cover;
         background-position: center;
     }
